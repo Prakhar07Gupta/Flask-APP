@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Cancer API</title>
+  <h1 style="font-size:300%;" ><u>BREAST CANCER DETECTION</u></h1>
+  <style>
+    h1 {
+        text-align: center;
+       }
+
+    /* CSS code for button */
+    body {
+      background-image: url('data:image/jpeg;base64,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');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  
+  <div>
+     <img src="https://www.womenonweb.org/image/2021/1/16/red_and_yellow_geometric_shapes_general_linkedin_banner.png%28mediaclass-body-media-large.8404215e8495df37569e9d37d0fc1acc904458cd%29.jpg" class="w3-border w3-padding" alt="AWARENESS ABOUT CANCER" style="width:100%">
+  </div>
+ 
+ 
+ <div class="login">
+	
+    <!-- Get input for predict the cancer -->
+    <center>
+    <form action="{{ url_for('predict')}}"method="post">
+        <h1 style="color:Crimson;font-family:courier;">||Enter the value of tumor features||</h1>
+        
+    	<input type="text" name="mean_radius" placeholder="mean radius" required="required" />
+        <input type="text" name="mean_texture" placeholder="mean texture" required="required" />
+		<input type="text" name="mean_perimeter" placeholder="mean perimeter" required="required" />
+		<input type="text" name="mean_area" placeholder="mean area" required="required" />
+        <input type="text" name="mean_smoothness" placeholder="mean smoothness" required="required" />
+		<input type="text" name="mean_compactness" placeholder="mean compactness" required="required" />
+		<br>
+    	<input type="text" name="mean_concavity" placeholder="mean concavity" required="required" />
+        <input type="text" name="mean_concave_points" placeholder="mean concave points" required="required" />
+		<input type="text" name="mean_symmetry" placeholder="mean symmetry" required="required" />
+    	<input type="text" name="mean_fractal_dimension" placeholder="mean fractal dimension" required="required" />
+        <input type="text" name="radius_error" placeholder="radius error" required="required" />
+		<input type="text" name="texture_error" placeholder="texture error" required="required" />
+		<br>
+    	<input type="text" name="perimeter_error" placeholder="perimeter error" required="required" />
+        <input type="text" name="area_error" placeholder="area error " required="required" />
+		<input type="text" name="smoothness_error" placeholder="smoothness error" required="required" />
+    	<input type="text" name="compactness_error" placeholder="compactness error" required="required" />
+        <input type="text" name="concavity_error" placeholder="concavity error" required="required" />
+		<input type="text" name="concave_points_error" placeholder="concave points error" required="required" />
+    	<br>
+    	<input type="text" name="symmetry_error" placeholder="symmetry error" required="required" />
+        <input type="text" name="fractal_dimension_error" placeholder="fractal dimension error" required="required" />
+		<input type="text" name="worst_radius" placeholder="worst radius" required="required" />
+    	<input type="text" name="worst_texture" placeholder="worst texture" required="required" />
+        <input type="text" name="worst_perimeter" placeholder="worst perimeter" required="required" />
+		<input type="text" name="worst_area" placeholder="worst area" required="required" />
+		<br>
+    	<input type="text" name="worst_smoothness" placeholder="worst smoothness" required="required" />
+        <input type="text" name="worst_compactness" placeholder="worst compactness" required="required" />
+		<input type="text" name="worst_concavity" placeholder="worst concavity" required="required" />
+    	<input type="text" name="worst_concave_points" placeholder="worst concave points" required="required" />
+        <input type="text" name="worst_symmetry" placeholder="'worst symmetry" required="required" />
+		<input type="text" name="worst_fractal_dimension" placeholder="worst fractal dimension" required="required" />
+        <br>
+        <br>
+        
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="https://www.who.int/news-room/fact-sheets/detail/breast-cancer" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Cancer</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
